@@ -1,13 +1,6 @@
 node ("amd64-node") {
-    agent {
-        docker { image 'arm64v8/node:19-alpine3.16' }
-    }
-    stages {
-        stage('Test') {
-            steps {
-                sh 'node --version'
-            }
-        }
+    stage('Build') {
+        echo "Hello"
     }
 }
 
