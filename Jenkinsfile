@@ -1,6 +1,9 @@
 pipeline {
     agent {
-        label 'amd64-node'
+        docker {
+            image 'node'
+            label 'amd64-node'   
+        }
     }
     
     stages {
