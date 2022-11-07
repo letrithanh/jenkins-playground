@@ -7,12 +7,6 @@ pipeline {
     }
     
     stages {
-        stage('Hello') {
-            steps {
-                sh 'docker ps -a'
-            }
-        }
-        
         stage('Test') {
             
             steps {
