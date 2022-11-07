@@ -4,9 +4,7 @@ node ("amd64-node") {
     }
     
     stage('Test') {
-        steps {
-            sh 'node --version'
-        }
+        sh 'node --version'
     }
     
 }
