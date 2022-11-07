@@ -4,8 +4,10 @@ pipeline {
     }
     
     stages {
-        stage('Test') {
-            sh 'docker ps -a'
-        }    
+        stage('Hello') {
+            steps {
+                echo 'Hello World'
+            }
+        }   
     }
 }
