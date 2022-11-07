@@ -1,7 +1,6 @@
 pipeline {
     agent {
         label 'amd64-node'
-        docker { image 'node:16.13.1-alpine' }
     }
     
     stages {
@@ -12,6 +11,9 @@ pipeline {
         }
         
         stage('Test') {
+            agent {
+                docker { image 'node:16.13.1-alpine' }
+            }
             steps {
                 sh 'node --version'
             }
