@@ -2,7 +2,7 @@ pipeline {
     agent {
         docker {
             image 'node'
-            //label 'amd64-node'   
+            label 'arm64-node'   
         }
     }
     
