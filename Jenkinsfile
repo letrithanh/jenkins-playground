@@ -1,3 +1,7 @@
+def echoHi = {
+    echo "Hi"
+}
+
 pipeline {
     agent {
         docker {
@@ -11,6 +15,14 @@ pipeline {
             
             steps {
                 sh 'node --version'
+            }
+        }
+        
+        stage('Echo') {
+            steps {
+                script {
+                    echoHi()
+                }
             }
         }
     }
